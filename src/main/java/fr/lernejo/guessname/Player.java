@@ -1,12 +1,10 @@
 package fr.lernejo.guessgame;
 
 public interface Player {
-
-    long askNextGuess();
+    Long askNextGuess();
 
     /**
      * Called by {@link Simulation} to inform that the previous guess was lower or greater that the number to find.
      */
-    void respond(boolean lowerOrGreater);
-
+    void respond( boolean lowerOrGreater );
 }
