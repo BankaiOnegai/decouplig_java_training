@@ -1,9 +1,6 @@
 package fr.lernejo.guessgame;
 
 import fr.lernejo.logger.Logger;
-package fr.lernejo.guessgame;
-
-import fr.lernejo.logger.Logger;
 import fr.lernejo.logger.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
@@ -34,8 +31,10 @@ public class Simulation {
         Long inputNumber = player.askNextGuess();
         logger.log( "Input number is " + inputNumber );
         if ( inputNumber < numberToGuess ) {
+            //logger.log( "Input number is lower than the number to guess" );
             player.respond( true );
         } else if ( inputNumber > numberToGuess ) {
+            //logger.log( "Input number is greater than the number to guess" );
             player.respond( false );
         } else if ( inputNumber == numberToGuess ) {
             logger.log( "Input number is equal to the number to guess" );
